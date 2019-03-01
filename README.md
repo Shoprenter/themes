@@ -1,7 +1,7 @@
 ## Dokumentációk sablon fejlesztőknek
 
 #### Sablon fejlesztési eszközök
-- [Theme Editor](theme-development-tools/THEME_EDITOR.md)
+- [Sablon fájl szerkesztő](theme-development-tools/THEME_EDITOR.md)
 
 #### Dinamikus modulok
 - [Dokumentáció](theme-sections/DOCS.md)
