@@ -57,6 +57,7 @@ A dinamikus modul schema tag-n belül a következő tulajdonságok határozható
 
 attributes
 settings
+blocks
 
 #### attributes
 
@@ -422,7 +423,7 @@ A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
 
 ```
 {
-    "type": "int",
+    "type": "number",
     "name": "number",
     "label": "Number",
     "default": 156,
