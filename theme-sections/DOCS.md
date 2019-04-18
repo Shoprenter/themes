@@ -168,6 +168,11 @@ mint például egy cím vagy egy név.
   <td>Boolean</td>
   <td></td>
 </tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
 </table>
 
 Példa egy szöveges beviteli mező objektumára:
@@ -222,6 +227,11 @@ Input
 </tr>
 <tr>
   <td>multilang</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
   <td>Boolean</td>
   <td></td>
 </tr>
@@ -282,6 +292,11 @@ Input
 </tr>
 <tr>
   <td>multilang</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
   <td>Boolean</td>
   <td></td>
 </tr>
@@ -363,6 +378,11 @@ Input
   <td>Boolean</td>
   <td></td>
 </tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
 </table>
 
 Például: 
@@ -419,6 +439,11 @@ A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
   <td>Boolean</td>
   <td></td>
 </tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
 </table>
 
 ```
@@ -471,6 +496,11 @@ Input
 <tr>
   <td>help</td>
   <td>Text | Object</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
   <td></td>
 </tr>
 </table>
