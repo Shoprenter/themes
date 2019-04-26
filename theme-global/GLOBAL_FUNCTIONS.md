@@ -1,5 +1,5 @@
 ## Tartalomjegyzék
-* [ShopRenter Twig függvények](#shoprenter-twig-fggvnyek)
+* [ShopRenter Twig függvények](#shoprenter-twig-függvények)
   * [asset](#asset)
   * [asset_image_url](#asset_image_url)
   * [viewHelper.loadModule](#viewhelperloadmodule)
