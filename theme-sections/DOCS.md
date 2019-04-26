@@ -10,7 +10,7 @@
 * [Input típusok](#input-típusok)
   * [Egysoros szöveg beviteli mező](#egysoros-szöveg-beviteli-mező)
   * [Képfeltöltés](#képfeltöltés)
-  * [Legördülő menü (select)](#legördülő-menü-(select))
+  * [Legördülő menü (select)](#legördülő-menü-select)
   * [Checkbox](#checkbox)
   * [Szám beviteli mező](#szám-beviteli-mező)
   * [Pozíció típusa](#pozíció-típusa)
