@@ -6,6 +6,9 @@
 #### Dinamikus modulok
 - [Dokumentáció](theme-sections/DOCS.md)
 
+#### Sablon rendszer
+- [Globális függvények](theme-global/GLOBAL_FUNCTIONS.md)
+
 #### Sablon fájlok
 - [header.tpl](theme-templates/HEADER_TPL.md)
 
