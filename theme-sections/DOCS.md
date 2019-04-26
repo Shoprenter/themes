@@ -116,6 +116,82 @@ A beállítás értékét a html-ben a **section Object**-en keresztül lehet el
 
 ```{{ section.settings.name }}```
 
+#### blocks
+
+Vannak olyan esetek amikor bizonyos beállításokból dinamikusan szeretnénk létrehozni több változatot, erre szolgálnak a blokkok. 
+Ezeket a változatokat a felhasználó tudja dinamikusan létrehozni, anélkül, hogy a programozónak újabb beállításokat/"beállítás csoportokat" kelljen hozzá adnia.
+
+Például:
+
+```
+{% schema %}
+    {
+        "attributes": {},
+        "settings": [],
+        "blocks": [
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "text",
+                    "name": "title",
+                    "label": "Title of image",
+                    "default": ""
+                },
+                {
+                    "type": "image",
+                    "name": "image",
+                    "label": "Image",
+                    "default": "no_image.jpg"
+                }
+            ]
+        ]
+    }
+{% endschema %}
+```
+
+A blocks objektumon belül, a **type** tulajdonságnak megadhatunk bármit, de ennek mindenképp egyedinek kell lennie, mivel ez azonosítja be az adott blokkot. A **type** csak a latin abc kis betűit és számokat tartalmazhat, valamint alulvonás karaktert (_).
+A **name** tulajdonság az admin felületen megjelenő **type** felhasználóbarát neve.
+A blokkon belüli **settings** objektum ugyanúgy funkciónál, mint ahogy a már fent említett **settings** objektum.
+
+A blocks objektumot a html-ben a **section Object**-en keresztül lehet elérni, például:
+
+```{{ section.blocks }}```
+
+Egy példa a blocks iterációra a Twig html-en belül:
+
+```
+<ul class="list">
+{% for block in section.blocks %}
+    {% if block.type == 'image' %}
+    <li>{{ block.settings.title }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+```
+
+##### Speciális field-ek a Blocks settings objektumon belül:
+Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különleges **name** tulajdonság értékek.
+
+<table>
+<tr>
+  <th>name</th>
+  <th>purpose</th>
+</tr>
+<tr>
+  <td>status</td>
+  <td>A listában láthatóvá válik az adott block példány státusza</td>
+</tr>
+<tr>
+  <td>title</td>
+  <td>A listában megjelenő adott block példány neve</td>
+</tr>
+<tr>
+  <td>image</td>
+  <td>A listában megjelenő adott block példány képe</td>
+</tr>
+</table>
+
 ### Input típusok
 
 Jelenleg elérhető input típusok: 
@@ -555,79 +631,3 @@ Példa:
     ]
 }
 ```
-
-#### blocks
-
-Vannak olyan esetek amikor bizonyos beállításokból dinamikusan szeretnénk létrehozni több változatot, erre szolgálnak a blokkok. 
-Ezeket a változatokat a felhasználó tudja dinamikusan létrehozni, anélkül, hogy a programozónak újabb beállításokat/"beállítás csoportokat" kelljen hozzá adnia.
-
-Például:
-
-```
-{% schema %}
-    {
-        "attributes": {},
-        "settings": [],
-        "blocks": [
-            "type": "image",
-            "name": "Image",
-            "settings": [
-                {
-                    "type": "text",
-                    "name": "title",
-                    "label": "Title of image",
-                    "default": ""
-                },
-                {
-                    "type": "image",
-                    "name": "image",
-                    "label": "Image",
-                    "default": "no_image.jpg"
-                }
-            ]
-        ]
-    }
-{% endschema %}
-```
-
-A blocks objektumon belül, a **type** tulajdonságnak megadhatunk bármit, de ennek mindenképp egyedinek kell lennie, mivel ez azonosítja be az adott blokkot. A **type** csak a latin abc kis betűit és számokat tartalmazhat, valamint alulvonás karaktert (_).
-A **name** tulajdonság az admin felületen megjelenő **type** felhasználóbarát neve.
-A blokkon belüli **settings** objektum ugyanúgy funkciónál, mint ahogy a már fent említett **settings** objektum.
-
-A blocks objektumot a html-ben a **section Object**-en keresztül lehet elérni, például:
-
-```{{ section.blocks }}```
-
-Egy példa a blocks iterációra a Twig html-en belül:
-
-```
-<ul class="list">
-{% for block in section.blocks %}
-    {% if block.type == 'image' %}
-    <li>{{ block.settings.title }}</li>
-    {% endif %}
-{% endfor %}
-</ul>
-```
-
-##### Speciális field-ek a Blocks settings objektumon belül:
-Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különleges **name** tulajdonság értékek.
-
-<table>
-<tr>
-  <th>name</th>
-  <th>purpose</th>
-</tr>
-<tr>
-  <td>status</td>
-  <td>A listában láthatóvá válik az adott block példány státusza</td>
-</tr>
-<tr>
-  <td>title</td>
-  <td>A listában megjelenő adott block példány neve</td>
-</tr>
-<tr>
-  <td>image</td>
-  <td>A listában megjelenő adott block példány képe</td>
-</tr>
-</table>
