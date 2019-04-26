@@ -5,7 +5,7 @@
   * [viewHelper.loadModule](#viewhelperloadmodule)
   * [viewHelper.loadPosition](#viewhelperloadposition)
   * [viewHelper.isPositionEmpty](#viewhelperispositionempty)
-  * [viewHelper.isDeviceType](#isdevicetype)
+  * [isDeviceType](#isdevicetype)
 * [ShopRenter Twig filterek](#shoprenter-twig-filterek)
 
 ## Globális függvények
