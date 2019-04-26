@@ -1,3 +1,21 @@
+## Tartalomjegyzék
+* [A dinamikus modulok manuális és pozícióban való használata](#a_dinamikus_modulok_manuális_és_pozícióban_való_használata)
+  * [Manuális használat](#manuális_használat)
+  * [Pozícióban való használat](#pozícióban_való_használat)
+* [Dinamikus modulok schema használata](#dinamikus_modulok_schema_használata)
+  * [attributes](#attributes)
+  * [settings](#settings)
+  * [blocks](#blocks)
+    * [Speciális field-ek a Blocks settings objektumon belül](#speciális_field-ek_a_blocks_settings_objektumon_belül)
+* [Input típusok](#input_típusok)
+  * [Egysoros szöveg beviteli mező](#egysoros_szöveg_beviteli_mező)
+  * [Képfeltöltés](#képfeltöltés)
+  * [Legördülő menü (select)](#legördülő_menü_(select))
+  * [Checkbox](#checkbox)
+  * [Szám beviteli mező](#szám_beviteli_mező)
+  * [Pozíció típusa](#pozíció_típusa)
+* [Többnyelvűség használata](#többnyelvűség_használata)
+
 ## Dinamikus modulok
 
 A Sablon fájl szerkesztőben található **sections** mappában találhatóak a dinamikus modulok.
@@ -170,7 +188,7 @@ Egy példa a blocks iterációra a Twig html-en belül:
 </ul>
 ```
 
-##### Speciális field-ek a Blocks settings objektumon belül:
+##### Speciális field-ek a Blocks settings objektumon belül
 Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különleges **name** tulajdonság értékek.
 
 <table>
