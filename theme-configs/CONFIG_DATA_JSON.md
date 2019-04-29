@@ -44,7 +44,8 @@ A presets objektumban találhatóak a sablonhoz tartozó szín változók. Ezen 
  
 Minden változóhoz tartozik egy ColorPicker vagy BackgroundPicker.
  Ha a változó nevében a postfix color, akkor ColorPicker jelenik meg, ha a postfix background akkor BackgroundPicker, 
- ha pedig egyik sem, akkor egy text típusú input mező.
+ ha pedig egyik sem, akkor egy text típusú input mező. A ColorPicker-nél egy színt lehet csak kiválasztani, míg a 
+ BackgroundPicker segítségével színátmeneteket is lehet megadni. 
  
 <table>
   <tr>
@@ -63,7 +64,10 @@ Minden változóhoz tartozik egy ColorPicker vagy BackgroundPicker.
     <td>egyik sem</td>
     <td>input['type=text']</td>
   </tr>
-</table>
+</table>   
+ 
+ **FONTOS: background postfix-es SCSS változót nem 
+ szabad linear-gradient közé rakni, mert hibát okoz és a css fájl nem tud létrejönni!**
  
 
 Példa:
@@ -103,12 +107,13 @@ Példa:
 ```
 
 A presets objektum közvetlen gyerek elemei a különböző színváltozatokat tartalmazza, illetve a **base** és a **custom** 
-objektumok speciális foglalt nevek. A **base** tartalmazza az alap változókat, amik minden színváltozatnál megegyeznek, 
-a példában a **blue** és a **green** pedig azokat a változókat amikben a színváltozat eltér. Ha az admin felhasználó a 
-Sablon színek oldalon módosítja a színeket akkor a módosult érték a **custom** objektumban kerül eltárolásra.
+objektumok speciális foglalt nevek. A **base** objektum tartalmazza az alap változókat, amik minden színváltozatnál megegyeznek, 
+a példában a **blue** és a **green** változatok pedig azokat a változókat tartalmazza amikben a színváltozat eltér. 
+Az assets és a presets objektumban ugyanazok a változatok szerepelnek. Ha az admin felhasználó a Sablon színek 
+oldalon módosítja a színeket akkor a módosult érték a **custom** objektumban kerül eltárolásra.
 
-**Sablon másolás** használatakor a színváltozatok nem kerülnek átmásolásra, a lemásolt sablon színváltozatai is a **base** 
-objektumon belül lesznek elérhetőek.
+**Sablon másolás** használatakor a színváltozatok (blue, green) nem kerülnek átmásolásra, a lemásolt sablon, ha például 
+a blue volt, akkor a blue objektum változói átkerülnek a **base** objektumon belülre.
 
 A változókat a sablonban fel lehet használni a **style.scss** stílusleíró fájlban. Minden változó ami a 
 **config.data.json** fájl presets objektumán belül meg van adva, elérhető **SCSS** változóként!

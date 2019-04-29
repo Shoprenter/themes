@@ -6,6 +6,7 @@
   * [viewHelper.loadPosition](#viewhelperloadposition)
   * [viewHelper.isPositionEmpty](#viewhelperispositionempty)
   * [isDeviceType](#isdevicetype)
+  * [config.get](#configget)
 * [ShopRenter Twig filterek](#shoprenter-twig-filterek)
 
 ## Globális függvények
@@ -16,7 +17,7 @@ ShopRenter által biztosított függvények és filterek is. Ezek azért készü
 
 ### ShopRenter TWIG függvények
 
-#### asset()
+* #### asset()
 
 Az asset függvény az elérési útvonalat kiegészíti a cdn-es domain névvel és verziót is kap.
 
@@ -37,17 +38,17 @@ A teljes url -el tér vissza, string típusként.
 Példa:
 
 ```twig
-<img src="{{ asset('/custom/boltnev/image/kepfajl.jpg') }}" />
+<script src="{{ asset('catalog/view/javascript/filter/mobile_filter.js') }}"></script>
 ```
 
 Kimenet:
 
 ```
-<img src="https://boltnev.cdn.shoprenter.hu/custom/boltnev/image/kepfajl.jpg?v=12345678" />
+<script src="https://boltnev.cdn.shoprenter.hu/catalog/view/javascript/filter/mobile_filter.js?v=12345678"></script>
 ```
 
 
-#### asset_image_url()
+* #### asset_image_url()
 
 Az asset_image_url függvénynek a kép fájl nevét kell csak megadni és kiegészíti a cdn-es domain névvel és verziót is kap.
 Célszerű a [dinamikus modulok](../theme-sections/DOCS.md) képfeltöltésénél használni.
@@ -79,10 +80,11 @@ Kimenet:
 ```
 
 
-#### viewHelper.loadModule()
+* #### viewHelper.loadModule()
 
 Modul vagy dinamikus modul beillesztésére szolgál. Ha egy modul hozzá van rendelve pozícióhoz és a viewHelper.loadModule
-segítségével behúzzuk, akkor mind a pozícióban, mind azon a helyen ahol meghívtuk meg fog jelenni a modul.
+segítségével is behúzzuk, akkor mind a pozícióban, mind azon a helyen ahol meghívtuk meg fog jelenni a modul. Azok a 
+modulok jelennek meg ilyenkor amiknél a státusz engedélyezett.  
 
 ##### Szintaxis
 
@@ -127,10 +129,10 @@ Kimenet 2:
 ```
 
 
-#### viewHelper.loadPosition() 
+* #### viewHelper.loadPosition() 
 
-Az adott pozícióban megjelenő összes modult jeleníti meg. A pozíciók amik a sablonban definiálva vannak a 
-**config/settings.json** fájlban találhatóak.
+Az adott pozícióban megjelenő összes modult jeleníti meg, amik engedélyezett állapotra vannak állítva. A pozíciók 
+amik a sablonban definiálva vannak a **config/settings.json** fájlban találhatóak.
 
 ##### Szintaxis
 
@@ -162,7 +164,7 @@ Kimenet:
 ```
 
 
-#### viewHelper.isPositionEmpty()
+* #### viewHelper.isPositionEmpty()
 
 Azt vizsgálja, hogy egy adott pozícióhoz van-e modul hozzárendelve.
 
@@ -198,7 +200,7 @@ Kimenet:
 ```
 
 
-#### isDeviceType()
+* #### isDeviceType()
 
 Ha szeretnénk mobil eszközön más megjelenést készíteni és már a html kódot se szeretnénk megjeleníteni, akkor az 
 isDeviceType függvény segítségével lehet feltételeket készíteni a templateben.
@@ -223,6 +225,8 @@ Példa:
 ```twig
 {% if isDeviceType('desktop') %}
     Csak asztalon jelenik meg
+{% else if isDeviceType('desktop') %}
+    <div>[-.-]</div>
 {% endif %}
 ```
 
@@ -232,5 +236,44 @@ Kimenet ha PC-ről nézzük:
 Csak asztalon jelenik meg
 ```
 
+Kimenet ha Mobiltelefonról nézzük:
+
+```html
+<div>[-.-]</div>
+```
+
+
+* #### config.get()
+
+A beállítások kikérésére szolgáló függvény.
+
+##### Szintaxis
+
+```
+config.get(configName)
+```
+
+##### Argumentumok
+
+**configName**: A beállítás neve
+
+##### Visszatérési érték
+
+Visszatérhet több típussal is, lehet String, Boolean vagy Integer is.
+
+
+Példa:
+
+```twig
+{% if config.get('config_show_header_phone') == 1 %}
+    <div class="header-phone">{{ phone }}</div>
+{% endif %}
+```
+
+Kimenet:
+
+```html
+<div class="header-phone">06-30-123-4567</div>
+```
 ### ShopRenter TWIG filterek
 
