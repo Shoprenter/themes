@@ -82,9 +82,8 @@ Kimenet:
 
 * #### viewHelper.loadModule()
 
-Modul vagy dinamikus modul beillesztésére szolgál. Ha egy modul hozzá van rendelve pozícióhoz és a viewHelper.loadModule
-segítségével is behúzzuk, akkor mind a pozícióban, mind azon a helyen ahol meghívtuk meg fog jelenni a modul. Azok a 
-modulok jelennek meg ilyenkor amiknél a státusz engedélyezett.  
+Az engedélyezett modulok vagy dinamikus modulok beillesztésére szolgál. Ha egy modul hozzá van rendelve egy pozícióhoz 
+és a viewHelper.loadModule segítségével is behúzzuk, akkor megjelenik a pozícióban és ott is ahol a loadModule-t használtuk.
 
 ##### Szintaxis
 
@@ -245,7 +244,7 @@ Kimenet ha Mobiltelefonról nézzük:
 
 * #### config.get()
 
-A beállítások kikérésére szolgáló függvény.
+Az admin felületen található beállítások kikérésére szolgáló függvény.
 
 ##### Szintaxis
 
