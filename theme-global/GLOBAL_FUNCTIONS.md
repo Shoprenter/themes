@@ -46,6 +46,7 @@ Kimenet:
 <img src="https://boltnev.cdn.shoprenter.hu/custom/boltnev/image/kepfajl.jpg?v=12345678" />
 ```
 
+
 #### asset_image_url()
 
 Az asset_image_url függvénynek a kép fájl nevét kell csak megadni és kiegészíti a cdn-es domain névvel és verziót is kap.
@@ -76,6 +77,7 @@ Kimenet:
 ```html
 <img src="https://boltnev.cdn.shoprenter.hu/custom/boltnev/image/kepfajl.jpg?v=12345678" />
 ```
+
 
 #### viewHelper.loadModule()
 
@@ -124,6 +126,7 @@ Kimenet 2:
 </div>
 ```
 
+
 #### viewHelper.loadPosition() 
 
 Az adott pozícióban megjelenő összes modult jeleníti meg. A pozíciók amik a sablonban definiálva vannak a 
@@ -157,6 +160,7 @@ Kimenet:
 <div id="module_latest_wrapper" class="module-latest-wrapper">...</div>
 <div id="module_kickerimage_wrapper" class="module-kickerimage-wrapper">...</div>
 ```
+
 
 #### viewHelper.isPositionEmpty()
 
@@ -192,6 +196,7 @@ Kimenet:
 <div id="module_latest_wrapper" class="module-latest-wrapper">...</div>
 <div id="module_kickerimage_wrapper" class="module-kickerimage-wrapper">...</div>
 ```
+
 
 #### isDeviceType()
 
