@@ -225,7 +225,7 @@ Példa:
 ```twig
 {% if isDeviceType('desktop') %}
     Csak asztalon jelenik meg
-{% else if isDeviceType('desktop') %}
+{% else if isDeviceType('mobile') %}
     <div>[-.-]</div>
 {% endif %}
 ```
