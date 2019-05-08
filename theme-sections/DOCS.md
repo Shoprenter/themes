@@ -9,6 +9,8 @@
     * [Speciális field-ek a Blocks settings objektumon belül](#speciális-field-ek-a-blocks-settings-objektumon-belül)
 * [Input típusok](#input-típusok)
   * [Egysoros szöveg beviteli mező](#egysoros-szöveg-beviteli-mező)
+  * [Többsoros szöveg beviteli mező](#többsoros-szöveg-beviteli-mező)
+  * [HTML Editor](#html-editor)
   * [Képfeltöltés](#képfeltöltés)
   * [Legördülő menü (select)](#legördülő-menü-select)
   * [Checkbox](#checkbox)
@@ -206,6 +208,8 @@ Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különlege
 Jelenleg elérhető input típusok: 
 
 text
+textarea
+htmleditor
 image
 select
 checkbox
@@ -215,6 +219,8 @@ position
 ### Egysoros szöveg beviteli mező
 Az egysoros szöveg beviteli mezőt akkor használhatjuk, ha rövid szöveget szeretnénk megjeleníteni, 
 mint például egy cím vagy egy név.
+
+Input
 
 <table>
 <tr>
@@ -259,8 +265,7 @@ mint például egy cím vagy egy név.
 </tr>
 </table>
 
-Példa egy szöveges beviteli mező objektumára:
-
+Példa:
 ```
 {
     "type": "text",
@@ -268,6 +273,126 @@ Példa egy szöveges beviteli mező objektumára:
     "label": "Title",
     "default": "My first section title",
     "help": "This is my first section title.",
+    "multilang": true
+}
+```
+
+### Többsoros szöveg beviteli mező
+A többsoros szöveg beviteli mezőt akkor használhatjuk, ha hosszabb szöveget vagy HTML kódot szeretnénk megjeleníteni.
+
+Input
+
+<table>
+<tr>
+  <th>field</th>
+  <th>value</th>
+  <th>required</th>
+</tr>
+<tr>
+  <td>type</td>
+  <td>"textarea"</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>name</td>
+  <td>Text (abcABC_)</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>label</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>default</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>help</td>
+  <td>Text | Object</td>
+  <td></td>
+</tr>
+<tr>
+  <td>multilang</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+</table>
+
+Példa:
+```
+{
+    "type": "textarea",
+    "name": "description",
+    "label": "Description",
+    "default": "My first section description",
+    "help": "This is my first section description.",
+    "multilang": true
+}
+```
+
+### HTML Editor
+A HTML editor-t, hasonlóan a többsoros szöveg beviteli mezőhöz, használhatjuk hosszabb szövegek vagy HTML kód szerkesztéséhez.
+
+Input
+
+<table>
+<tr>
+  <th>field</th>
+  <th>value</th>
+  <th>required</th>
+</tr>
+<tr>
+  <td>type</td>
+  <td>"htmleditor"</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>name</td>
+  <td>Text (abcABC_)</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>label</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>default</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>help</td>
+  <td>Text | Object</td>
+  <td></td>
+</tr>
+<tr>
+  <td>multilang</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+</table>
+
+Példa:
+```
+{
+    "type": "htmleditor",
+    "name": "description",
+    "label": "Description",
+    "default": "My first section description",
+    "help": "This is my first section description.",
     "multilang": true
 }
 ```
@@ -320,8 +445,7 @@ Input
 </tr>
 </table>
 
-Példa: 
-
+Példa:
 ```
 {
     "type": "image",
@@ -390,7 +514,6 @@ Input
 </table>
 
 Példa:
-
 ```
 {
     "type": "select",
@@ -465,8 +588,7 @@ Input
 </tr>
 </table>
 
-Például: 
-
+Példa:
 ```
 {
     "type": "checkbox",
@@ -480,6 +602,8 @@ Például:
 
 ### Szám beviteli mező
 A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
+
+Input
 
 <table>
 <tr>
@@ -524,6 +648,7 @@ A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
 </tr>
 </table>
 
+Példa:
 ```
 {
     "type": "number",
@@ -582,7 +707,6 @@ Input
 </table>
 
 Példa:
-
 ```
 {
     "type": "position",
@@ -598,7 +722,6 @@ Többnyelvűség esetén a **multilang** tulajdonságot true értékre kell áll
 A label, default, help és options tulajdonságok esetén van lehetőség többnyelvű értékek felvételére.
 
 Példa:
-
 ```
 {
     "type": "select",
