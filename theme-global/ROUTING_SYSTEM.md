@@ -262,7 +262,8 @@ Terméklista/kategória oldal
 <tr>
 <td>
 product/manufacturer.tpl
-</td>
+</td> 
+<td>
 Terméklista egy adott gyártóhoz
 </td>
 </tr>
@@ -270,7 +271,8 @@ Terméklista egy adott gyártóhoz
 <tr>
 <td>
 product/productspecial.tpl
-</td>
+</td> 
+<td>
 Akciós termékek lista oldala
 </td>
 </tr>
@@ -278,7 +280,8 @@ Akciós termékek lista oldala
 <tr>
 <td>
 product/latestlist.tpl
-</td>
+</td> 
+<td>
 Legújabb termékek lista oldala
 </td>
 </tr>
