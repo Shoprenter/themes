@@ -1,4 +1,4 @@
-## Tartalomjegyzék
+# Tartalomjegyzék
 * [A dinamikus modulok manuális és pozícióban való használata](#a-dinamikus-modulok-manuális-és-pozícióban-való-használata)
   * [Manuális használat](#manuális-használat)
   * [Pozícióban való használat](#pozícióban-való-használat)
@@ -9,6 +9,8 @@
     * [Speciális field-ek a Blocks settings objektumon belül](#speciális-field-ek-a-blocks-settings-objektumon-belül)
 * [Input típusok](#input-típusok)
   * [Egysoros szöveg beviteli mező](#egysoros-szöveg-beviteli-mező)
+  * [Többsoros szöveg beviteli mező](#többsoros-szöveg-beviteli-mező)
+  * [HTML Editor](#html-editor)
   * [Képfeltöltés](#képfeltöltés)
   * [Legördülő menü (select)](#legördülő-menü-select)
   * [Checkbox](#checkbox)
@@ -16,8 +18,7 @@
   * [Pozíció típusa](#pozíció-típusa)
 * [Többnyelvűség használata](#többnyelvűség-használata)
 
-## Dinamikus modulok
-
+# Dinamikus modulok
 A Sablon fájl szerkesztőben található **sections** mappában találhatóak a dinamikus modulok.
 A dinamikus modulok olyan modulok, amelyekben egyszerre tudjuk a megjelenést (frontend) és a 
 beállításokat (admin felület) kezelni.
@@ -31,12 +32,10 @@ A dinamikus modulokban egy új tag is használható:
 
 A schema tag-ről bővebben a későbbiekben fogunk írni.
 
-### A dinamikus modulok manuális és pozícióban való használata
-
+## A dinamikus modulok manuális és pozícióban való használata
 A dinamikus modulok a sablon fájlokhoz hozzáadhatóak manuálisan, vagy modul pozíciókon keresztül dinamikusan is. 
 
-#### Manuális használat
-
+### Manuális használat
 Dinamikus modult a sablon fájlhoz a **viewHelper.loadModule()** függvény segítségével lehet beilleszteni. Például:
 
 ```{{ viewHelper.loadModule('sections/my-first-section') }}```
@@ -49,8 +48,7 @@ A dinamikus modul több sablon fájlba is beilleszthető, ugyanakkor az adott di
  dinamikus modulok nem tartalmazhatnak más dinamikus modulokat. Manuális használat esetén elegendő egy 
  **name** tulajdonság megadása az _attributes_ objektumban. 
  
-#### Pozícióban való használat
-
+### Pozícióban való használat
 A dinamikus modulokat pozíciókban is el lehet helyezni a **viewHelper.loadPosition()** függvény segítségével. Például:
 
 ```{{ viewHelper.loadPosition('home') }}```
@@ -63,8 +61,7 @@ A dinamikus modulok pozícióját az adminisztrátorok az admin felületen belü
 tudják megváltoztatni. A dinamikus moduloknak lennie kell egy **position**, **status** és **sort_order** beállítása a 
 schema settings objektumán belül különben nem fog megjelenni a modul. 
 
-### Dinamikus modulok schema használata
-
+## Dinamikus modulok schema használata
 A dinamikus modulok sémája a Twig **{% schema %}** tag-ben van definiálva. A twig comment tag-hez hasonlóan 
 a sémának nincs kimenete és a schema tag-ben lévő Twig kód nem kerül lefuttatásra. 
 
@@ -77,8 +74,7 @@ attributes
 settings
 blocks
 
-#### attributes
-
+### attributes
 Dinamikus modul schema-jában lennie kell egy **attributes** objektumnak és egy **name** tulajdonságnak.
 Van lehetőség egy **helpLink** tulajdonság megadására is, aminek egy url-t kell megadni. 
 Erre az url-re fog a Segítség gomb mutatni.
@@ -99,8 +95,7 @@ Például:
 {% endschema %}
 ```
 
-#### settings
-
+### settings
 A dinamikus modulnak a saját beállításai vannak a settings objektumon belül.
 A beállításokat arra lehet használni, hogy egy admin felületet biztosítsunk a dinamikus modul szerkesztő felületéhez.
 A felhasználó az admin felületen a modul listából érheti el a dinamikus modult a nevére vagy a szerkesztés gombra
@@ -134,8 +129,7 @@ A beállítás értékét a html-ben a **section Object**-en keresztül lehet el
 
 ```{{ section.settings.name }}```
 
-#### blocks
-
+### blocks
 Vannak olyan esetek amikor bizonyos beállításokból dinamikusan szeretnénk létrehozni több változatot, erre szolgálnak a blokkok. 
 Ezeket a változatokat a felhasználó tudja dinamikusan létrehozni, anélkül, hogy a programozónak újabb beállításokat/"beállítás csoportokat" kelljen hozzá adnia.
 
@@ -188,7 +182,7 @@ Egy példa a blocks iterációra a Twig html-en belül:
 </ul>
 ```
 
-##### Speciális field-ek a Blocks settings objektumon belül
+#### Speciális field-ek a Blocks settings objektumon belül
 Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különleges **name** tulajdonság értékek.
 
 <table>
@@ -210,21 +204,23 @@ Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különlege
 </tr>
 </table>
 
-### Input típusok
-
+## Input típusok
 Jelenleg elérhető input típusok: 
 
 text
+textarea
+htmleditor
 image
 select
 checkbox
 number
 position
 
-#### Egysoros szöveg beviteli mező
-
+### Egysoros szöveg beviteli mező
 Az egysoros szöveg beviteli mezőt akkor használhatjuk, ha rövid szöveget szeretnénk megjeleníteni, 
 mint például egy cím vagy egy név.
+
+Input
 
 <table>
 <tr>
@@ -269,8 +265,7 @@ mint például egy cím vagy egy név.
 </tr>
 </table>
 
-Példa egy szöveges beviteli mező objektumára:
-
+Példa:
 ```
 {
     "type": "text",
@@ -282,8 +277,127 @@ Példa egy szöveges beviteli mező objektumára:
 }
 ```
 
-#### Képfeltöltés
+### Többsoros szöveg beviteli mező
+A többsoros szöveg beviteli mezőt akkor használhatjuk, ha hosszabb szöveget vagy HTML kódot szeretnénk megjeleníteni.
 
+Input
+
+<table>
+<tr>
+  <th>field</th>
+  <th>value</th>
+  <th>required</th>
+</tr>
+<tr>
+  <td>type</td>
+  <td>"textarea"</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>name</td>
+  <td>Text (abcABC_)</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>label</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>default</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>help</td>
+  <td>Text | Object</td>
+  <td></td>
+</tr>
+<tr>
+  <td>multilang</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+</table>
+
+Példa:
+```
+{
+    "type": "textarea",
+    "name": "description",
+    "label": "Description",
+    "default": "My first section description",
+    "help": "This is my first section description.",
+    "multilang": true
+}
+```
+
+### HTML Editor
+A HTML editor-t, hasonlóan a többsoros szöveg beviteli mezőhöz, használhatjuk hosszabb szövegek vagy HTML kód szerkesztéséhez.
+
+Input
+
+<table>
+<tr>
+  <th>field</th>
+  <th>value</th>
+  <th>required</th>
+</tr>
+<tr>
+  <td>type</td>
+  <td>"htmleditor"</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>name</td>
+  <td>Text (abcABC_)</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>label</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>default</td>
+  <td>Text | Object</td>
+  <td>required</td>
+</tr>
+<tr>
+  <td>help</td>
+  <td>Text | Object</td>
+  <td></td>
+</tr>
+<tr>
+  <td>multilang</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+<tr>
+  <td>required</td>
+  <td>Boolean</td>
+  <td></td>
+</tr>
+</table>
+
+Példa:
+```
+{
+    "type": "htmleditor",
+    "name": "description",
+    "label": "Description",
+    "default": "My first section description",
+    "help": "This is my first section description.",
+    "multilang": true
+}
+```
+
+### Képfeltöltés
 A képfeltöltésre szolgáló mező az image típusú mező, ahol a képek, fav ikonok, vagy a  slideshow-khoz használt képeket lehet feltölteni.
 
 Input
@@ -331,8 +445,7 @@ Input
 </tr>
 </table>
 
-Példa: 
-
+Példa:
 ```
 {
     "type": "image",
@@ -344,8 +457,7 @@ Példa:
 }
 ```
 
-#### Legördülő menü (select)
-
+### Legördülő menü (select)
 A legördülő típus arra használható, hogy a felhasználónak különböző lehetőségeket mutassunk. 
 Például, kiválaszthatja azokat a termékeket, amelyeket a termék oldalon szeretne megjeleníteni. 
 
@@ -402,7 +514,6 @@ Input
 </table>
 
 Példa:
-
 ```
 {
     "type": "select",
@@ -428,13 +539,11 @@ Példa:
 }
 ```
 
-#### Checkbox
-
+### Checkbox
 A checkbox típus segítségével beállítások ki-be kapcsolását végezhetjük el, például, az oldalon lévő 
 elemek megjelenítésére vagy elrejtésére. 
 
 Input
-
 
 <table>
 <tr>
@@ -479,8 +588,7 @@ Input
 </tr>
 </table>
 
-Például: 
-
+Példa:
 ```
 {
     "type": "checkbox",
@@ -492,10 +600,10 @@ Például:
 }
 ```
 
-#### Szám beviteli mező
+### Szám beviteli mező
+A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
 
-A number típusú beviteli mező csak szám karakterek beolvasására alkalmas. 
-
+Input
 
 <table>
 <tr>
@@ -540,6 +648,7 @@ A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
 </tr>
 </table>
 
+Példa:
 ```
 {
     "type": "number",
@@ -551,15 +660,13 @@ A number típusú beviteli mező csak szám karakterek beolvasására alkalmas.
 }
 ```
 
-#### Pozíció típusa
-
+### Pozíció típusa
 Ha a típust position-re állítjuk, arra használhatjuk, hogy egy legördülő menüből ki tudjuk választani a 
 rendszer pozíciókat. A különbség a legördülő menü és a position típus között az, hogy a position típusnak 
 előre meghatározott értékei vannak. Ezek az előre meghatározott értékek a **settings.json** fájl positions 
 objektumában vannak definiálva.
 
 Input
-
 
 <table>
 <tr>
@@ -600,7 +707,6 @@ Input
 </table>
 
 Példa:
-
 ```
 {
     "type": "position",
@@ -611,13 +717,11 @@ Példa:
 }
 ```
 
-### Többnyelvűség használata
-
+## Többnyelvűség használata
 Többnyelvűség esetén a **multilang** tulajdonságot true értékre kell állítani egy mező esetén. 
 A label, default, help és options tulajdonságok esetén van lehetőség többnyelvű értékek felvételére.
 
 Példa:
-
 ```
 {
     "type": "select",
