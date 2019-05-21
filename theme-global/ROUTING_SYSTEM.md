@@ -1,4 +1,9 @@
-## Routing rendszer
+## Tartalomjegyzék
+* [Routing rendszer](#routing-rendszer)
+* [Route-ok ShopRenter-ben](#route-ok-shoprenter-ben)
+* [Hol és mire használhatjuk a route-kat?](#hol-és-mire-használhatjuk-a-route-kat)
+
+### Routing rendszer
  
  A ShopRenter sablon rendszeréhez szorosan kötődik a routing rendszer. A route azt az azonosítót jelenti, ami alapján
   meg lehet állapítani, hogy melyik aloldalon vagyunk. Ez egy sablon készítése során fontos, hiszen ez alapján lehet

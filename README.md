@@ -8,6 +8,7 @@
 
 #### Sablon rendszer
 - [Globális függvények](theme-global/GLOBAL_FUNCTIONS.md)
+- [Routing rendszer](theme-global/ROUTING_SYSTEM.md)
 
 #### Sablon fájlok
 - [header.tpl](theme-templates/HEADER_TPL.md)
