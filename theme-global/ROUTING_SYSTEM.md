@@ -226,6 +226,9 @@ Kívánságlistán lévő termékek listája
 
 </table>
 
+A bejelentkezés, regisztráció, kosár és pénztár oldalak sablon fájljaihoz nem lehet hozzáférni a ShopRenter-ben. 
+Ezeken az oldalakon a route értéke üres lesz.
+
 ### Hol és mire használhatjuk a route-kat?
 
 1. Ha szeretnénk meghatározni, hogy melyik oldalon vagyunk, a
