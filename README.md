@@ -15,3 +15,4 @@
 
 #### Konfigurációs fájlok
 - [config.data.json](theme-configs/CONFIG_DATA_JSON.md)
+- [settings.json](theme-configs/SETTINGS_JSON.md)
