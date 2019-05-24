@@ -8,7 +8,7 @@ Az adott sablonhoz tartozó sablon beállításokat tartalmazza, mint például 
 
 ```json
 {
-    "layouts": {},
+    "layouts": [],
     "positions": {}
 }
 ```
