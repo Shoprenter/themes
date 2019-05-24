@@ -141,22 +141,24 @@ Például:
         "attributes": {},
         "settings": [],
         "blocks": [
-            "type": "image",
-            "name": "Image",
-            "settings": [
-                {
-                    "type": "text",
-                    "name": "title",
-                    "label": "Title of image",
-                    "default": ""
-                },
-                {
-                    "type": "image",
-                    "name": "image",
-                    "label": "Image",
-                    "default": "no_image.jpg"
-                }
-            ]
+            {
+                "type": "image",
+                "name": "Image",
+                "settings": [
+                    {
+                        "type": "text",
+                        "name": "title",
+                        "label": "Title of image",
+                        "default": ""
+                    },
+                    {
+                        "type": "image",
+                        "name": "image",
+                        "label": "Image",
+                        "default": "no_image.jpg"
+                    }
+                ]
+            }
         ]
     }
 {% endschema %}
