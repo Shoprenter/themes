@@ -247,7 +247,7 @@ Input
 </tr>
 <tr>
   <td>default</td>
-  <td>Text | Number | Boolean | Object</td>
+  <td>Text | Object</td>
   <td>required</td>
 </tr>
 <tr>
