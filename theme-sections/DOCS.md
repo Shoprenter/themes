@@ -209,14 +209,15 @@ Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különlege
 ## Input típusok
 Jelenleg elérhető input típusok: 
 
-text
-textarea
-htmleditor
-image
-select
-checkbox
-number
-position
+text  
+textarea  
+htmleditor  
+image  
+select  
+checkbox  
+number  
+position  
+datetime
 
 ### Egysoros szöveg beviteli mező
 Az egysoros szöveg beviteli mezőt akkor használhatjuk, ha rövid szöveget szeretnénk megjeleníteni, 
@@ -717,6 +718,44 @@ Példa:
     "default": "home",
     "help": "You can change sections position ."
 }
+```
+
+### Dátum idővel (datetime)
+
+A `datetime` segítségével egy felhasználóbarát, dátum- és időválasztó felülettel elátott inputot tudunk elhelyezni.  
+A `default` mezőben üres karakterláncot, vagy `YYYY-MM-DD HH:mm:ss` formátumú dátumot lehet megadni. (pl.: `"default": ""`
+vagy `"default": "2019-01-01 12:00:00"`)  
+Mentéskor is ilyen formátumú értékek kerülnek tárolásra.  
+Amennyiben nem kötelező a mező (`"required": false`), megjelnik egy törlés gomb is.  
+
+Input
+
+|field|value|required|
+|:---:|:---|:---:|
+|type|`"datetime"`|required|
+|name|Text (abcABC_)|required|
+|label|Text &#124; Object|required|
+|default|Text (`""` &#124; `"2019-01-01 12:00:00"`)|required|
+|help|Text &#124; Object||
+|required|boolean||
+
+
+Példa:
+```json
+{
+    "type": "datetime",
+    "name": "a_datetime_field",
+    "label": {
+      "hu": "Válasszon egy időpontot",
+      "en": "Select a date and time"
+    },
+    "default": "2019-01-01 12:00:00",  
+    "help": {
+      "hu": "Segítség szöveg magyarul",
+      "en": "Help text in English"
+    }
+}
+
 ```
 
 ## Többnyelvűség használata
