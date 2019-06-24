@@ -755,7 +755,6 @@ Példa:
       "en": "Help text in English"
     }
 }
-
 ```
 
 ## Többnyelvűség használata
