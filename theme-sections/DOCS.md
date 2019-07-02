@@ -757,6 +757,10 @@ Példa:
 }
 ```
 
+**Vigyázat!**  
+Twig-ben a `{{ ""|date('Y-m-d H:i:s') }}` az aktuális dátumot és időt fogja visszaadni.  
+Tehát ha a mező nem kötelező és üres értéket mentünk el, akkor ezt külön kezelnünk kell!
+
 ## Többnyelvűség használata
 Többnyelvűség esetén a **multilang** tulajdonságot true értékre kell állítani egy mező esetén. 
 A label, default, help és options tulajdonságok esetén van lehetőség többnyelvű értékek felvételére.
