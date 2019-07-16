@@ -15,7 +15,8 @@
   * [Legördülő menü (select)](#legördülő-menü-select)
   * [Checkbox](#checkbox)
   * [Szám beviteli mező](#szám-beviteli-mező)
-  * [Pozíció típusa](#pozíció-típusa)
+  * [Pozíció típus](#pozíció-típus)
+  * [Dátum idővel](#dátum-idővel)
 * [Többnyelvűség használata](#többnyelvűség-használata)
 
 # Dinamikus modulok
@@ -460,6 +461,8 @@ Példa:
 }
 ```
 
+A Twig templateben az [asset_image_url](https://github.com/Shoprenter/themes/blob/master/theme-global/GLOBAL_FUNCTIONS.md#asset_image_url) függvényt célszerű használni a képfájl megjelenítésére.
+
 ### Legördülő menü (select)
 A legördülő típus arra használható, hogy a felhasználónak különböző lehetőségeket mutassunk. 
 Például, kiválaszthatja azokat a termékeket, amelyeket a termék oldalon szeretne megjeleníteni. 
@@ -663,7 +666,7 @@ Példa:
 }
 ```
 
-### Pozíció típusa
+### Pozíció típus
 Ha a típust position-re állítjuk, arra használhatjuk, hogy egy legördülő menüből ki tudjuk választani a 
 rendszer pozíciókat. A különbség a legördülő menü és a position típus között az, hogy a position típusnak 
 előre meghatározott értékei vannak. Ezek az előre meghatározott értékek a **settings.json** fájl positions 
@@ -720,7 +723,7 @@ Példa:
 }
 ```
 
-### Dátum idővel (datetime)
+### Dátum idővel
 
 A `datetime` segítségével egy felhasználóbarát, dátum- és időválasztó felülettel elátott inputot tudunk elhelyezni.  
 A `default` mezőben üres karakterláncot, vagy `YYYY-MM-DD HH:mm:ss` formátumú dátumot lehet megadni. (pl.: `"default": ""`
@@ -758,7 +761,7 @@ Példa:
 ```
 
 **Vigyázat!**  
-Twig-ben a `{{ ""|date('Y-m-d H:i:s') }}` az aktuális dátumot és időt fogja visszaadni.  
+Twig templateben a `{{ ""|date('Y-m-d H:i:s') }}` az aktuális dátumot és időt fogja visszaadni.  
 Tehát ha a mező nem kötelező és üres értéket mentünk el, akkor ezt külön kezelnünk kell!
 
 ## Többnyelvűség használata
