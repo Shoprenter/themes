@@ -12,6 +12,7 @@
 
 #### Sablon fájlok
 - [header.tpl](theme-templates/HEADER_TPL.md)
+- [pagehead.tpl](theme-templates/PAGEHEAD_TPL.md)
 
 #### Konfigurációs fájlok
 - [config.data.json](theme-configs/CONFIG_DATA_JSON.md)
