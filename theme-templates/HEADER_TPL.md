@@ -71,7 +71,7 @@ Ha van ilyen üzenet akkor a ```<div id="page-warnings">...</div>``` jelenik meg
 
 A bolt információknál megadott telefonszámot adja vissza.
 
-* **isFrontPage**
+* **isFrontPage** (deprecated)
 
 Ha a kezdőlapon vagyunk akkor true az értéke, különben pedig false.
 
