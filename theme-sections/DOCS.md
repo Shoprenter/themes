@@ -57,7 +57,7 @@ A dinamikus modulokat pozíciókban is el lehet helyezni a **viewHelper.loadPosi
 Ez azt jelenti, hogy a ShopRenter minden olyan modult megjelenít aminek a pozíciója: _home_. 
 A pozíciókat a Sablon fájl szerkesztőben a **settings.json** fájl **positions** objektumában lehet meghatározni.
 
-**Fontos**: Ha szeretnénk új pozíciókat létrehozni ide kell felvenni őket. 
+:exclamation: **FONTOS**: Ha szeretnénk új pozíciókat létrehozni ide kell felvenni őket. 
 A dinamikus modulok pozícióját az adminisztrátorok az admin felületen belül a dinamikus modul szerkesztés oldalán
 tudják megváltoztatni. A dinamikus moduloknak lennie kell egy **position**, **status** és **sort_order** beállítása a 
 schema settings objektumán belül különben nem fog megjelenni a modul. 
