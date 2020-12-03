@@ -3,7 +3,7 @@
 A Sablon fájl szerkesztő egy olyan új funkció a ShopRenter rendszerében amellyel lehetőséget adunk arra, 
 hogy az ügyfelek egyedi design igényeiket önerőből vagy külső segítséggel megvalósíthassák!
 A funkció jelenleg Béta állapotban van, amit a ShopRenter boltok admin felületén a Labor menüpontban 
-lehet bekapcsolni. A fejlesztőknek lehetőségük van a [Partner Support](mailto:partnersupport@shoprenter.hu) csapattól 
+lehet bekapcsolni. A fejlesztőknek lehetőségük van a [Storefront](mailto:storefront@shoprenter.hu) csapattól 
 technikai segítséget kérni.
 
 #### A Sablon fájl szerkesztő elérése és az ezzel kapcsolatos általános tudnivalók:
