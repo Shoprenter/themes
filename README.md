@@ -1,16 +1,16 @@
 ## Dokumentációk sablon fejlesztőknek
 
-#### Sablon fejlesztési eszközök
-- [Sablon fájl szerkesztő](theme-development-tools/THEME_EDITOR.md)
+#### Téma fejlesztési eszközök
+- [Téma fájl szerkesztő](theme-development-tools/THEME_EDITOR.md)
 
 #### Dinamikus modulok
 - [Dokumentáció](theme-sections/DOCS.md)
 
-#### Sablon rendszer
+#### Téma rendszer
 - [Globális függvények](theme-global/GLOBAL_FUNCTIONS.md)
 - [Routing rendszer](theme-global/ROUTING_SYSTEM.md)
 
-#### Sablon fájlok
+#### Téma fájlok
 - [header.tpl](theme-templates/HEADER_TPL.md)
 - [pagehead.tpl](theme-templates/PAGEHEAD_TPL.md)
 
