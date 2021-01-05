@@ -4,7 +4,7 @@
 
 ## settings.json
 
-Az adott sablonhoz tartozó sablon beállításokat tartalmazza, mint például a layout-ok és pozíciók.
+Az adott témához tartozó téma beállításokat tartalmazza, mint például a layout-ok és pozíciók.
 
 ```json
 {
@@ -16,7 +16,7 @@ Az adott sablonhoz tartozó sablon beállításokat tartalmazza, mint például 
 ### layouts
 
 A layouts tömbben lehet beállítani azt hogy az adott [route](../theme-configs/SETTINGS_JSON.md)-hoz milyen elrendezés 
-tartozzon. A layoutokhoz tartozó sablon fájlokat a sablon fájl szerkesztő layout mappájában lehet elérni.
+tartozzon. A layoutokhoz tartozó téma fájlokat a téma fájl szerkesztő layout mappájában lehet elérni.
 
 Példa:
 
@@ -51,7 +51,7 @@ Egy másik elem a példában a `common/home` route, vagyis a kezdőlap esetén m
 
 ### positions
 
-A positions objektumban az adott sablonhoz tartozó modul pozíciókat lehet beállítani. A positions objektumban lévő 
+A positions objektumban az adott témához tartozó modul pozíciókat lehet beállítani. A positions objektumban lévő 
 értékek tulajdonság nevei lesznek a pozíciók nevei, az értéke pedig egy objektum, aminél két tulajdonságot lehet 
 definiálni:
 
