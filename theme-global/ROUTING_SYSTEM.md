@@ -5,9 +5,9 @@
 
 ### Routing rendszer
  
- A ShopRenter sablon rendszeréhez szorosan kötődik a routing rendszer. A route azt az azonosítót jelenti, ami alapján
-  meg lehet állapítani, hogy melyik aloldalon vagyunk. Ez egy sablon készítése során fontos, hiszen ez alapján lehet
-   megtalálni a megfelelő sablon fájlt, illetve az adott route-hoz tartozó layout-ot módosítani.
+ A ShopRenter téma rendszeréhez szorosan kötődik a routing rendszer. A route azt az azonosítót jelenti, ami alapján
+  meg lehet állapítani, hogy melyik aloldalon vagyunk. Ez egy téma készítése során fontos, hiszen ez alapján lehet
+   megtalálni a megfelelő téma fájlt, illetve az adott route-hoz tartozó layout-ot módosítani.
    
 ### Route-ok ShopRenter-ben
 
@@ -226,7 +226,7 @@ Kívánságlistán lévő termékek listája
 
 </table>
 
-A bejelentkezés, regisztráció, kosár és pénztár oldalak sablon fájljaihoz nem lehet hozzáférni a ShopRenter-ben. 
+A bejelentkezés, regisztráció, kosár és pénztár oldalak téma fájljaihoz nem lehet hozzáférni a ShopRenter-ben. 
 Ezeken az oldalakon a route értéke üres lesz.
 
 ### Hol és mire használhatjuk a route-kat?
@@ -237,10 +237,10 @@ Ezeken az oldalakon a route értéke üres lesz.
 
 2. A `settings.json` layouts property értékénél meg lehet adni, melyik route-hoz milyen layout tartozzon.
 
-3. A Sablon fájl szerkesztőben a route alapján lehet megtalálni a sablon fájlt. 
+3. A Téma fájl szerkesztőben a route alapján lehet megtalálni a téma fájlt. 
 Például a product/product route-hoz a product/product.tpl tartozik.
 
-Kivétel ez alól a `product/list`, ahol nem a product/list.tpl a sablon fájl, hanem több sablon fájl is tartozik hozzá:
+Kivétel ez alól a `product/list`, ahol nem a product/list.tpl a téma fájl, hanem több téma fájl is tartozik hozzá:
   
 <table>
 
