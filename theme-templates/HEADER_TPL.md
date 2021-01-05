@@ -1,7 +1,7 @@
 ## header.tpl
 
-A fejléc reprezentálására szolgáló sablon fájl. Általában tartalmazza a fejlécet a kategória menüvel együtt és egyes 
-sablonoknál a bannerkezelő is a része. A **common** mappában található meg a Sablon fájl szerkesztőben.
+A fejléc reprezentálására szolgáló téma fájl. Általában tartalmazza a fejlécet a kategória menüvel együtt és egyes 
+témáknál a bannerkezelő is a része. A **common** mappában található meg a Téma fájl szerkesztőben.
 
 A header.tpl-ben is használható minden függvény, ami globálisan elérhető. Részletek erről a
  [Globális függvények](../theme-global/GLOBAL_FUNCTIONS.md) dokumentációban találhatóak.
@@ -12,8 +12,8 @@ A fejléc a pagehead.tpl után kerül be a forráskódba. Két olyan html elem i
 nem a header.tpl-ben található. Az egyik a ```<div class="page-wrap">``` a másik pedig a ```<main>```. Ennek a két 
 html tagnek a záró része a footer.tpl-ben található.
 
-Maga a fejléc tartalmi része a ```<header>``` tag-en belül van. Mivel a fejléc minden sablonnál egyedi, így a
-**Tokyo sablon**on keresztül nézzük meg mit tartalmaz.
+Maga a fejléc tartalmi része a ```<header>``` tag-en belül van. Mivel a fejléc minden témánál egyedi, így a
+**Tokyo témán** keresztül nézzük meg mit tartalmaz.
 
 * **Mobil menü**
 
@@ -27,7 +27,7 @@ Ha admin felhasználóval belépünk akkor az oldal tetején megjelenő piros s�
 
 * **Fejléc top pozíció**
 
-A Tokyo sablonban található egy **header-top** pozíció elhelyezés. Itt jelenik meg például a Top line modul.
+A Tokyo témában található egy **header-top** pozíció elhelyezés. Itt jelenik meg például a Top line modul.
 
 * **Navigációs sáv**
 
@@ -38,7 +38,7 @@ belépés és a szöveges menüpontok jelennek meg.
 * **Fejléc alsó része**
 
 A navigációs sáv alatt a fejléc alsó része jelenik meg a logóval, kategória menüvel és a kereső, kosár modulokkal. 
-A Tokyo sablonban speciális a kereső modul, mivel csak egy ikon jelenik meg. Az ikonra kattinva egy teljes képernyős 
+A Tokyo témában speciális a kereső modul, mivel csak egy ikon jelenik meg. Az ikonra kattinva egy teljes képernyős 
 ablakban lehet a keresést végrehajtani. A kereső és kosár ikon között megjelenhet még a kívánságlista ikon is, ez is 
 beállítás függő és akkor jelenik meg ha van a kívánságlistához adva tartalom. 
 
@@ -49,7 +49,7 @@ logó látszódik. Ennek lekezelése is a header.tpl része.
 
 * **Banner pozíció**
 
-A Tokyo sablonban a bannerkezelő modulnak dedikált pozíció van létrehozva a fejlécben scroller pozíció néven. 
+A Tokyo témában a bannerkezelő modulnak dedikált pozíció van létrehozva a fejlécben scroller pozíció néven. 
 Ez csak akkor jelenik meg ha a főoldalon vagyunk és nem karbantartás módban.
 
 * **Kenyérmorzsa**
