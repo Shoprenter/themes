@@ -131,7 +131,7 @@ Kimenet 2:
 * #### viewHelper.loadPosition() 
 
 Az adott pozícióban megjelenő összes modult jeleníti meg, amik engedélyezett állapotra vannak állítva. A pozíciók 
-amik a sablonban definiálva vannak a **config/settings.json** fájlban találhatóak.
+amik a témában definiálva vannak a **config/settings.json** fájlban találhatóak.
 
 ##### Szintaxis
 
