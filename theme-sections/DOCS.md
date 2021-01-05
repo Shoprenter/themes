@@ -20,7 +20,7 @@
 * [Többnyelvűség használata](#többnyelvűség-használata)
 
 # Dinamikus modulok
-A Sablon fájl szerkesztőben található **sections** mappában találhatóak a dinamikus modulok.
+A Téma fájl szerkesztőben található **sections** mappában találhatóak a dinamikus modulok.
 A dinamikus modulok olyan modulok, amelyekben egyszerre tudjuk a megjelenést (frontend) és a 
 beállításokat (admin felület) kezelni.
 
@@ -34,16 +34,16 @@ A dinamikus modulokban egy új tag is használható:
 A schema tag-ről bővebben a későbbiekben fogunk írni.
 
 ## A dinamikus modulok manuális és pozícióban való használata
-A dinamikus modulok a sablon fájlokhoz hozzáadhatóak manuálisan, vagy modul pozíciókon keresztül dinamikusan is. 
+A dinamikus modulok a téma fájlokhoz hozzáadhatóak manuálisan, vagy modul pozíciókon keresztül dinamikusan is. 
 
 ### Manuális használat
-Dinamikus modult a sablon fájlhoz a **viewHelper.loadModule()** függvény segítségével lehet beilleszteni. Például:
+Dinamikus modult a téma fájlhoz a **viewHelper.loadModule()** függvény segítségével lehet beilleszteni. Például:
 
 ```{{ viewHelper.loadModule('sections/my-first-section') }}```
 
 _A fenti példa szerint beillesztett modult a későbbiekben "manuálisan beillesztett modulnak" hívjuk._
 
-A dinamikus modul több sablon fájlba is beilleszthető, ugyanakkor az adott dinamikus modul csak egyszer fordulhat elő
+A dinamikus modul több téma fájlba is beilleszthető, ugyanakkor az adott dinamikus modul csak egyszer fordulhat elő
  a modulok között, a modul lista oldalon. Ha egy manuálisan beillesztett modulnak módosítjuk a konfigurációját, 
  a módosítás minden olyan helyen érvényes lesz, ahol az adott modul megtalálható. Fontos megjegyezni, hogy a 
  dinamikus modulok nem tartalmazhatnak más dinamikus modulokat. Manuális használat esetén elegendő egy 
@@ -55,7 +55,7 @@ A dinamikus modulokat pozíciókban is el lehet helyezni a **viewHelper.loadPosi
 ```{{ viewHelper.loadPosition('home') }}```
 
 Ez azt jelenti, hogy a ShopRenter minden olyan modult megjelenít aminek a pozíciója: _home_. 
-A pozíciókat a Sablon fájl szerkesztőben a **settings.json** fájl **positions** objektumában lehet meghatározni.
+A pozíciókat a Téma fájl szerkesztőben a **settings.json** fájl **positions** objektumában lehet meghatározni.
 
 :red_circle: **FONTOS**: Ha szeretnénk új pozíciókat létrehozni ide kell felvenni őket. 
 A dinamikus modulok pozícióját az adminisztrátorok az admin felületen belül a dinamikus modul szerkesztés oldalán
@@ -67,7 +67,7 @@ A dinamikus modulok sémája a Twig **{% schema %}** tag-ben van definiálva. A 
 a sémának nincs kimenete és a schema tag-ben lévő Twig kód nem kerül lefuttatásra. 
 
 Minden dinamikus modulban egy schema tag lehet, aminek valid JSON-t kell tartalmaznia. 
-A schema tag a dinamikus modul sablon fájlján belül bárhol elhelyezhető, kivéve egy másik Twig tag-en belül. 
+A schema tag a dinamikus modul téma fájlban bárhol elhelyezhető, kivéve egy másik Twig tag-en belül. 
 
 A dinamikus modul schema tag-n belül a következő tulajdonságok határozhatók meg:
 
