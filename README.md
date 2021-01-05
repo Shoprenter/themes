@@ -1,4 +1,4 @@
-## Dokumentációk sablon fejlesztőknek
+## Dokumentációk téma fejlesztőknek
 
 #### Téma fejlesztési eszközök
 - [Téma fájl szerkesztő](theme-development-tools/THEME_EDITOR.md)
