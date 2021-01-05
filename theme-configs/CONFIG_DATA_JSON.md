@@ -1,6 +1,6 @@
 ## config.data.json
 
-A sablon konfigurálásához szükséges adatokat tartalmazza JSON formátumban. 
+A téma konfigurálásához szükséges adatokat tartalmazza JSON formátumban. 
 
 Két részből áll, az assets és a presets részből:
 
@@ -13,8 +13,8 @@ Két részből áll, az assets és a presets részből:
 
 ### assets
 
-Az assets objektumban vannak nyilvántartva a sablonhoz tartozó képek. Ezek például a bélyegképek, amelyek az admin 
-felületen megjelennek a sablon kiválasztás oldalon. 
+Az assets objektumban vannak nyilvántartva a témához tartozó képek. Ezek például a bélyegképek, amelyek az admin 
+felületen megjelennek a téma kiválasztás oldalon. 
 
 
 Példa:
@@ -39,8 +39,8 @@ Példa:
 
 ### presets
 
-A presets objektumban találhatóak a sablonhoz tartozó szín változók. Ezen változók alapján jön létre
- a **Sablon testreszabás** oldalon a **Sablon színek** fül tartalma. 
+A presets objektumban találhatóak a témához tartozó szín változók. Ezen változók alapján jön létre
+ a **Téma testreszabás** oldalon a **Téma színek** fül tartalma. 
  
 Minden változóhoz tartozik egy ColorPicker vagy BackgroundPicker.
  Ha a változó nevében a postfix color, akkor ColorPicker jelenik meg, ha a postfix background akkor BackgroundPicker, 
@@ -109,13 +109,13 @@ Példa:
 A presets objektum közvetlen gyerek elemei a különböző színváltozatokat tartalmazza, illetve a **base** és a **custom** 
 objektumok speciális foglalt nevek. A **base** objektum tartalmazza az alap változókat, amik minden színváltozatnál megegyeznek, 
 a példában a **blue** és a **green** változatok pedig azokat a változókat tartalmazza amikben a színváltozat eltér. 
-Az assets és a presets objektumban ugyanazok a változatok szerepelnek. Ha az admin felhasználó a Sablon színek 
+Az assets és a presets objektumban ugyanazok a változatok szerepelnek. Ha az admin felhasználó a Téma színek 
 oldalon módosítja a színeket akkor a módosult érték a **custom** objektumban kerül eltárolásra.
 
-**Sablon másolás** használatakor a színváltozatok (blue, green) nem kerülnek átmásolásra, a lemásolt sablon, ha például 
+**Téma másolás** használatakor a színváltozatok (blue, green) nem kerülnek átmásolásra, a lemásolt téma, ha például 
 a blue volt, akkor a blue objektum változói átkerülnek a **base** objektumon belülre.
 
-A változókat a sablonban fel lehet használni a **style.scss** stílusleíró fájlban. Minden változó ami a 
+A változókat a témában fel lehet használni a **style.scss** stílusleíró fájlban. Minden változó ami a 
 **config.data.json** fájl presets objektumán belül meg van adva, elérhető **SCSS** változóként!
 
 Például a global-font-color értéke a JSON -ben #8e8e8e, a style.scss-ben felhasználható a $global-font-color:
