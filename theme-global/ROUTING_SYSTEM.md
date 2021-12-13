@@ -232,7 +232,7 @@ Ezeken az oldalakon a route értéke üres lesz.
 ### Hol és mire használhatjuk a route-kat?
 
 1. Ha szeretnénk meghatározni, hogy melyik oldalon vagyunk, a
- [ShopRenter.js](https://github.com/Shoprenter/developers/blob/master/frontend-api/SHOPRENTERJS_API.md#page) 
+ [ShopRenter.js](https://github.com/Shoprenter/sr-api-docs/blob/master/development/frontend-api/01_shoprenterjs_api.md#page) 
  objektumból ki lehet kérni: `ShopRenter.page.route`
 
 2. A `settings.json` layouts property értékénél meg lehet adni, melyik route-hoz milyen layout tartozzon.
