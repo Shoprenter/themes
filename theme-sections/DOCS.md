@@ -131,6 +131,13 @@ A beállítás értékét a html-ben a **section Object**-en keresztül lehet el
 
 ```{{ section.settings.name }}```
 
+A default property szolgál egy mező alapértelmezett értékének beállítására. Ez egy opcionálisan meghatározható beállítás. A property értéke lehet string|int|bool|object, annak függvényében, hogy multilang -e az adott mező, vagy sem.
+
+- Ha nincs default mező, akkor az összes nyelven üres.
+- Ha van default mező, de üres, akkor az összes nyelven üres.
+- Ha van default, de nem objektum, akkor minden nyelven a meghatározott értéket kapja meg.
+- Ha objektum, akkor language code alapján meghatározott nyelven kapja meg a felvett értéket.
+
 ### blocks
 Vannak olyan esetek amikor bizonyos beállításokból dinamikusan szeretnénk létrehozni több változatot, erre szolgálnak a blokkok.
 Ezeket a változatokat a felhasználó tudja dinamikusan létrehozni, anélkül, hogy a programozónak újabb beállításokat/"beállítás csoportokat" kelljen hozzá adnia.
@@ -210,7 +217,11 @@ Az admin felületen, a "Tartalom" lista megjelenését befolyásoló különlege
 
 ### presets
 
-Ha egy mező értékét szeretnénk előre meghatározni, a "presets" nevű property lesz segítségünkre. Ebben az objektumban tudjuk meghatározni egy-egy mező értékét.
+Ez egy opcionálisan megadható beállítás.
+
+Ha egy mező értékét szeretnénk előre meghatározni, a "presets" nevű property lesz segítségünkre. Ebben az objektumban tudjuk meghatározni egy-egy mező értékét. Fontos, hogy a presets-ben definiált kezdőértékeket csak témaváltáskor állítja be a rendszer és menti el adatbázisba.
+
+A presets-ek használatának leginkább a blokkoknál van értelme, amikor egy létrehozott blokkhoz szeretnénk minta elemeket rögzíteni.
 
 Vegyük például a fentebb létrehozott blokkot:
 ```
@@ -293,7 +304,7 @@ Példa:
 }
 ```
 
-**Ha egy többnyelvű mező presets értéke nem objektum, váratlan hibaüzenetet fogunk kapni a modul mentése során. Ugyanez igaz a fordított esetre is, azaz egy NEM többnyelvű mező preset értéke nem lehet objektum, különben hibát fogunk kapni a mentés alkalmával.**
+**Ha egy többnyelvű mező presets értéke nem objektum, "Váratlan hibaüzenet" jelzést fogunk kapni a modul mentése során. Ugyanez igaz a fordított esetre is, azaz egy NEM többnyelvű mező preset értéke nem lehet objektum, különben hibát fogunk kapni a mentés alkalmával.**
 
 ## Input típusok
 Jelenleg elérhető input típusok:
