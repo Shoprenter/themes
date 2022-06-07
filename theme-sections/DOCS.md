@@ -77,12 +77,39 @@ settings
 blocks
 
 ### attributes
-Dinamikus modul schema-jában lennie kell egy **attributes** objektumnak és egy **name** tulajdonságnak.
-Van lehetőség egy **helpLink** tulajdonság megadására is, aminek egy url-t kell megadni.
-Erre az url-re fog a Segítség gomb mutatni.
+Dinamikus modul schema-jában lennie kell egy **attributes** objektumnak és egy **name** tulajdonságnak. Ha ez hiányzik, hibaüzenetet fogunk kapni a modul betöltése során.
+
+#### name tulajdonság
+A name tulajdonsággal adhatjuk meg a dinamikus modul nevét. Ez lehet egyszerű String típus vagy akár objektum is. Utóbbi használata akkor indokolt, ha nyelvspecifikusan szeretnénk meghatározni a modul nevét.
 
 Például:
+```
+{% schema %}
+{
+    "attributes": {
+         "name": "Teszt modul név"
+    }
+}
+{% endschema %}
+```
+Vagy:
+```
+{% schema %}
+{
+    "attributes": {
+         "name": {
+            "en": "English section name",
+            "hu": "Magyar modul név"
+         }
+    }
+}
+{% endschema %}
+```
 
+#### helpLink tulajdonság
+Van lehetőség egy **helpLink** tulajdonság megadására is, aminek egy url-t kell megadni. Erre az url-re fog a "Segítség" gomb mutatni.
+
+Például:
 ```
 {% schema %}
 {
@@ -92,6 +119,25 @@ Például:
               "en": "https://www.shoprenter.hu/blog/1",
               "hu": "https://www.shoprenter.hu/blog/1"
          }
+    }
+}
+{% endschema %}
+```
+
+#### maxBlocks tulajdonság
+Ha egy olyan dinamikus modult hozunk létre, amely blokkokat is használ (lásd bővebben: [blocks](#blocks)), akkor lehetőségünk van megadni, hogy legfeljebb hány darab blokk elemet lehessen rögzíteni a modulhoz.
+
+Ennek az alapértelmezett értéke jelenleg 16. A maxBlocks érték 1 és 16 között kell, hogy legyen.
+
+Ha nem megfelelő értéket adunk meg ennek a tulajdonságnak, az hibaüzenetet fog eredményezni, amely megakadályozza a modul betöltését.
+
+Példa a helyes használatra:
+```
+{% schema %}
+{
+    "attributes": {
+         "name": "My first section",
+         "maxBlocks": 6
     }
 }
 {% endschema %}
