@@ -127,7 +127,7 @@ Például:
 #### maxBlocks tulajdonság
 Ha egy olyan dinamikus modult hozunk létre, amely blokkokat is használ (lásd bővebben: [blocks](#blocks)), akkor lehetőségünk van megadni, hogy legfeljebb hány darab blokk elemet lehessen rögzíteni a modulhoz.
 
-Ennek az alapértelmezett értéke jelenleg 16. A maxBlocks érték 1 és 16 között kell, hogy legyen.
+Ennek az alapértelmezett értéke jelenleg 16. A maxBlocks érték 1 és 16 között kell, hogy legyen. Fontos még, hogy az értéknek integer típusnak kell lennie.
 
 Ha nem megfelelő értéket adunk meg ennek a tulajdonságnak, az hibaüzenetet fog eredményezni, amely megakadályozza a modul betöltését.
 
@@ -891,17 +891,17 @@ Input
 Példa:
 ```json
 {
-    "type": "datetime",
-    "name": "a_datetime_field",
-    "label": {
-      "hu": "Válasszon egy időpontot",
-      "en": "Select a date and time"
-    },
-    "default": "2019-01-01 12:00:00",  
-    "help": {
-      "hu": "Segítség szöveg magyarul",
-      "en": "Help text in English"
-    }
+  "type": "datetime",
+  "name": "a_datetime_field",
+  "label": {
+    "hu": "Válasszon egy időpontot",
+    "en": "Select a date and time"
+  },
+  "default": "2019-01-01 12:00:00",
+  "help": {
+    "hu": "Segítség szöveg magyarul",
+    "en": "Help text in English"
+  }
 }
 ```
 
