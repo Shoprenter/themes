@@ -127,7 +127,7 @@ Például:
 #### maxBlocks tulajdonság
 Ha egy olyan dinamikus modult hozunk létre, amely blokkokat is használ (lásd bővebben: [blocks](#blocks)), akkor lehetőségünk van megadni, hogy legfeljebb hány darab blokk elemet lehessen rögzíteni a modulhoz.
 
-Ennek az alapértelmezett értéke jelenleg 16. A maxBlocks érték 1 és 16 között kell, hogy legyen. Fontos még, hogy az értéknek integer típusnak kell lennie.
+Alapértelmezetten bármennyi blokkot felvehetünk egy dinamikus modulhoz. Ha viszont szeretnénk egy maximum értéket beállítani, fontos, hogy maxBlocks tulajdonság értékének egy pozitív egész számot adjunk meg. 
 
 Ha nem megfelelő értéket adunk meg ennek a tulajdonságnak, az hibaüzenetet fog eredményezni, amely megakadályozza a modul betöltését.
 
