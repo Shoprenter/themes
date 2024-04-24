@@ -15,6 +15,7 @@
 - [Függvények](theme-global/GLOBAL_FUNCTIONS.md)
 - [Objektumok](theme-global/GLOBAL_OBJECTS.md)
 - [Routing rendszer](theme-global/ROUTING_SYSTEM.md)
+- [Tagek](theme-global/GLOBAL_TAGS.md)
 
 ### Konfigurációs fájlok
 - [config.data.json](theme-configs/CONFIG_DATA_JSON.md)

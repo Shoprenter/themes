@@ -1,5 +1,8 @@
 # Objektumok
 
+## Leírás
+Hamarosan
+
 ## config
 
 Hamarosan
@@ -9,31 +12,32 @@ Hamarosan
 ### Leírás
 Az objektum információkat tartalmaz a webáruházban beállított pénznemekről.
 ### Tulajdonságok
+
 <table>
 <tr>
     <th>Tulajdonság</th>
     <th>Leírás</th>
-    <th>Használat</th>
+    <th>Típus</th>
 </tr>
 <tr>
     <td>currencyId</td>
     <td>aktuális pénznem id, pl. 4</td>
-    <td>{{ shop.currency.currencyId }}</td>
+    <td>String</td>
 </tr>
 <tr>
     <td>currencyCode</td>
     <td>aktuális pénznem code, pl. HUF</td>
-    <td>{{ shop.currency.currencyCode }}</td>
+    <td>String</td>
 </tr>
 <tr>
     <td>currencyTitle</td>
     <td>aktuális pénznem title, pl. Hungarian Forint</td>
-    <td>{{ shop.currency.currencyTitle }}</td>
+    <td>String</td>
 </tr>
 <tr>
     <td>availableCurrencies</td>
     <td>tömb, amely az aktív pénznemeket tartalmazza</td>
-    <td>{{ shop.availableCurrencies[0].getCurrencyTitle }}</td>
+    <td>Array</td>
 </tr>
 </table>
 
@@ -43,6 +47,9 @@ Az aktív pénznemek 1. elemének a title-je:
 {{ shop.availableCurrencies[0].getCurrencyTitle }}
 ```
 ---
+
+##
+<tab><tab>code/text here
 
 ## image
 
