@@ -1,23 +1,23 @@
 # Tartalomjegyzék
 * [A dinamikus modulok manuális és pozícióban való használata](#a-dinamikus-modulok-manuális-és-pozícióban-való-használata)
-    * [Manuális használat](#manuális-használat)
-    * [Pozícióban való használat](#pozícióban-való-használat)
+  * [Manuális használat](#manuális-használat)
+  * [Pozícióban való használat](#pozícióban-való-használat)
 * [Dinamikus modulok schema használata](#dinamikus-modulok-schema-használata)
-    * [attributes](#attributes)
-    * [settings](#settings)
-    * [blocks](#blocks)
-        * [Speciális field-ek a Blocks settings objektumon belül](#speciális-field-ek-a-blocks-settings-objektumon-belül)
-    * [presets](#presets)
+  * [attributes](#attributes)
+  * [settings](#settings)
+  * [blocks](#blocks)
+    * [Speciális field-ek a Blocks settings objektumon belül](#speciális-field-ek-a-blocks-settings-objektumon-belül)
+  * [presets](#presets)
 * [Input típusok](#input-típusok)
-    * [Egysoros szöveg beviteli mező](#egysoros-szöveg-beviteli-mező)
-    * [Többsoros szöveg beviteli mező](#többsoros-szöveg-beviteli-mező)
-    * [HTML Editor](#html-editor)
-    * [Képfeltöltés](#képfeltöltés)
-    * [Legördülő menü (select)](#legördülő-menü-select)
-    * [Checkbox](#checkbox)
-    * [Szám beviteli mező](#szám-beviteli-mező)
-    * [Pozíció típus](#pozíció-típus)
-    * [Dátum idővel](#dátum-idővel)
+  * [Egysoros szöveg beviteli mező](#egysoros-szöveg-beviteli-mező)
+  * [Többsoros szöveg beviteli mező](#többsoros-szöveg-beviteli-mező)
+  * [HTML Editor](#html-editor)
+  * [Képfeltöltés](#képfeltöltés)
+  * [Legördülő menü (select)](#legördülő-menü-select)
+  * [Checkbox](#checkbox)
+  * [Szám beviteli mező](#szám-beviteli-mező)
+  * [Pozíció típus](#pozíció-típus)
+  * [Dátum idővel](#dátum-idővel)
 * [Többnyelvűség használata](#többnyelvűség-használata)
 
 # Dinamikus modulok
@@ -127,7 +127,7 @@ Például:
 #### maxBlocks tulajdonság
 Ha egy olyan dinamikus modult hozunk létre, amely blokkokat is használ (lásd bővebben: [blocks](#blocks)), akkor lehetőségünk van megadni, hogy legfeljebb hány darab blokk elemet lehessen rögzíteni a modulhoz.
 
-Alapértelmezetten bármennyi blokkot felvehetünk egy dinamikus modulhoz. Ha viszont szeretnénk egy maximum értéket beállítani, fontos, hogy maxBlocks tulajdonság értékének egy pozitív egész számot adjunk meg. 
+Alapértelmezetten bármennyi blokkot felvehetünk egy dinamikus modulhoz. Ha viszont szeretnénk egy maximum értéket beállítani, fontos, hogy maxBlocks tulajdonság értékének egy pozitív egész számot adjunk meg.
 
 Ha nem megfelelő értéket adunk meg ennek a tulajdonságnak, az hibaüzenetet fog eredményezni, amely megakadályozza a modul betöltését.
 

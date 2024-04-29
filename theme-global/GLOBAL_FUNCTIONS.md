@@ -11,8 +11,8 @@
 
 ## Globális függvények
 
-A téma fájlokhoz a [TWIG](https://twig.sensiolabs.org) template motort használja a ShopRenter. Így minden tpl 
-kiterjesztésű fájl TWIG szintaxisra épül. A TWIG dokumentációban látható alap függvények és filterek mellett vannak a 
+A téma fájlokhoz a [TWIG](https://twig.sensiolabs.org) template motort használja a ShopRenter. Így minden tpl
+kiterjesztésű fájl TWIG szintaxisra épül. A TWIG dokumentációban látható alap függvények és filterek mellett vannak a
 ShopRenter által biztosított függvények és filterek is. Ezek azért készültek, hogy a frontend fejlesztést megkönnyítsék.
 
 ### ShopRenter TWIG függvények
@@ -82,7 +82,7 @@ Kimenet:
 
 * #### viewHelper.loadModule()
 
-Az engedélyezett modulok vagy dinamikus modulok beillesztésére szolgál. Ha egy modul hozzá van rendelve egy pozícióhoz 
+Az engedélyezett modulok vagy dinamikus modulok beillesztésére szolgál. Ha egy modul hozzá van rendelve egy pozícióhoz
 és a viewHelper.loadModule segítségével is behúzzuk, akkor megjelenik a pozícióban és ott is ahol a loadModule-t használtuk.
 
 ##### Szintaxis
@@ -109,7 +109,7 @@ Kimenet 1:
 
 ```html
 <div id="logo" class="module content-module header-position logo-module logo-text hide-top">
-    <a href="/">Tokyo</a>
+  <a href="/">Tokyo</a>
 </div>
 ```
 
@@ -123,14 +123,14 @@ Kimenet 2:
 
 ```html
 <div id="section-section-name" class="section-wrapper module-editable">
-    ...
+  ...
 </div>
 ```
 
 
-* #### viewHelper.loadPosition() 
+* #### viewHelper.loadPosition()
 
-Az adott pozícióban megjelenő összes modult jeleníti meg, amik engedélyezett állapotra vannak állítva. A pozíciók 
+Az adott pozícióban megjelenő összes modult jeleníti meg, amik engedélyezett állapotra vannak állítva. A pozíciók
 amik a témában definiálva vannak a **config/settings.json** fájlban találhatóak.
 
 ##### Szintaxis
@@ -201,7 +201,7 @@ Kimenet:
 
 * #### isDeviceType()
 
-Ha szeretnénk mobil eszközön más megjelenést készíteni és már a html kódot se szeretnénk megjeleníteni, akkor az 
+Ha szeretnénk mobil eszközön más megjelenést készíteni és már a html kódot se szeretnénk megjeleníteni, akkor az
 isDeviceType függvény segítségével lehet feltételeket készíteni a templateben.
 
 ##### Szintaxis
