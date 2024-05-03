@@ -76,7 +76,7 @@ Példa:
 Kimenet:
 
 ```html
-<img src="https://boltnev.cdn.shoprenter.hu/custom/boltnev/image/kepfajl.jpg?v=12345678" />
+<img src="https://boltnev.cdn.shoprenter.hu/custom/boltnev/image/data/kepfajl.jpg?v=12345678" />
 ```
 
 
