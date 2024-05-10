@@ -1,4 +1,4 @@
-## header.tpl
+## common/header.tpl - deprecated
 
 A fejléc reprezentálására szolgáló téma fájl. Általában tartalmazza a fejlécet a kategória menüvel együtt és egyes 
 témáknál a bannerkezelő is a része. A **common** mappában található meg a Téma fájl szerkesztőben.
