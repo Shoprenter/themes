@@ -1,2 +1,2 @@
 ## A Shoprenter téma dokumentációk elérhetősége megváltozott:
-## Új cím: https://doc.shoprenter.hu/
+https://doc.shoprenter.hu/themes/themes/01_starter2.html
